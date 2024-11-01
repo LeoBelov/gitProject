@@ -47,7 +47,6 @@ function sumNumbers(array) {
 // console.log(sumNumbers([1, 2, 3, 4, 5, 2, 23432, 2342354, 234, 234]));
 
 //if else
-
 function getCostTicket(age) {
   let cost = 0;
   let message;
@@ -67,4 +66,27 @@ function getCostTicket(age) {
   return message;
 }
 
-console.log(getCostTicket(65));
+// console.log(getCostTicket(65));
+
+//switch
+const printName = (name) => {
+  let message;
+  switch (name) {
+    case "Petr":
+      message = `${name} Petrov`;
+      break;
+    case "Leo":
+      message = `${name} Belov`;
+      break;
+    case "Ivan":
+      message = `${name} Ivanov`;
+      break;
+    default:
+      message = `${name} Sidorov`;
+      break;
+  }
+
+  return message;
+};
+
+console.log(printName("Iva"));
