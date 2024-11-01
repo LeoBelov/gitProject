@@ -128,4 +128,96 @@ const rockPaperScissors = () => {
   return `${message} You = ${personSubject}, computer = ${computerSubject}`;
 };
 
-console.log(rockPaperScissors());
+// console.log(rockPaperScissors());
+
+// let jsPracticeTime = prompt("Сколько часов в день вы практикуете JavaScript?");
+
+// let showJSLearningIntensity =
+//   jsPracticeTime >= 3
+//     ? () => alert("Вы на правильном пути")
+//     : () => alert("Надо больше уделять время практике");
+
+// showJSLearningIntensity();
+
+let date = new Date();
+
+// console.log(date.toLocaleString());
+
+//recursion
+// let day = 0;
+// const howMuchLearnJS = () => {
+//   if (day === 1000) return;
+//   day++;
+//   console.log(`days count - ${day}`);
+//   howMuchLearnJS();
+// };
+
+// howMuchLearnJS();
+
+// for (let days = 0; days <= 400; days++) {
+//   console.log(days);
+// }
+
+//factorial
+
+// let s = 1;
+
+// const getFactorial1 = (n) => {
+//   if (n === 0) return;
+//   s = s * n;
+//   getFactorial1(n - 1);
+// };
+
+// getFactorial1(10);
+
+const getFactorial2 = (n) => {
+  if (n <= 1) return 1;
+  return n * getFactorial2(n - 1);
+};
+
+// console.log(getFactorial2(10));
+
+//reduce
+let array = [1, 2, 3, 4, 5];
+
+let sum = array.reduce((accumulator, current_value) => {
+  return accumulator + current_value;
+});
+
+// console.log(sum);
+
+let s = 0;
+
+for (let i = 0; i < array.length; i++) {
+  s = s + array[i];
+}
+
+// console.log(s);
+
+let courses = [
+  {
+    course: "JavaScript",
+    price: 30000,
+  },
+  {
+    course: "CSS",
+    price: 20000,
+  },
+  {
+    course: "React",
+    price: 25000,
+  },
+  {
+    course: "Python",
+    price: 45000,
+  },
+];
+
+let newCourses = courses.reduce((newArr, elem) => {
+  return {
+    ...newArr,
+    [elem.course]: elem.price,
+  };
+}, {});
+
+console.log(newCourses);
