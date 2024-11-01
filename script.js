@@ -89,4 +89,43 @@ const printName = (name) => {
   return message;
 };
 
-console.log(printName("Iva"));
+// console.log(printName("Iva"));
+
+const randomIntFromInterval = (min, max) => {
+  let random = Math.floor(Math.random() * (max - min + 1) + min);
+  return random;
+};
+
+const rockPaperScissors = () => {
+  let data = ["rock", "paper", "scissors"];
+  let choicePerson = randomIntFromInterval(0, 2);
+  let message;
+  let personSubject;
+  let computerSubject;
+  let choiceComputer = randomIntFromInterval(0, 2);
+  if (choicePerson === 2 && choiceComputer === 0) {
+    personSubject = data[choicePerson];
+    computerSubject = data[choiceComputer];
+    message = "Computer win!";
+  } else if (choicePerson === 0 && choiceComputer === 2) {
+    personSubject = data[choicePerson];
+    computerSubject = data[choiceComputer];
+    message = "You win!";
+  } else if (choiceComputer > choicePerson) {
+    personSubject = data[choicePerson];
+    computerSubject = data[choiceComputer];
+    message = "Computer win!";
+  } else if (choicePerson === choiceComputer) {
+    personSubject = data[choicePerson];
+    computerSubject = data[choiceComputer];
+    message = "Draw!";
+  } else {
+    personSubject = data[choicePerson];
+    computerSubject = data[choiceComputer];
+    message = "You win!";
+  }
+
+  return `${message} You = ${personSubject}, computer = ${computerSubject}`;
+};
+
+console.log(rockPaperScissors());
