@@ -238,35 +238,35 @@ let skillsForJS = {
 
 // console.log(Object.keys(skillsForJS).length);
 
-let cars = [
-  {
-    brand: "BMW",
-    model: "3 series",
-    year: "2023",
-  },
-  {
-    brand: "Audi",
-    model: "A4",
-    year: "2022",
-  },
-  {
-    brand: "Mercedes",
-    model: "C-class",
-    year: "2024",
-  },
-  {
-    brand: "Lexus",
-    model: "IS",
-    year: "2021",
-  },
-];
+// let cars = [
+//   {
+//     brand: "BMW",
+//     model: "3 series",
+//     year: "2023",
+//   },
+//   {
+//     brand: "Audi",
+//     model: "A4",
+//     year: "2022",
+//   },
+//   {
+//     brand: "Mercedes",
+//     model: "C-class",
+//     year: "2024",
+//   },
+//   {
+//     brand: "Lexus",
+//     model: "IS",
+//     year: "2021",
+//   },
+// ];
 
-let carForYear = cars.reduce((newArr, car) => {
-  return {
-    ...newArr,
-    [car.brand]: car.year,
-  };
-}, {});
+// let carForYear = cars.reduce((newArr, car) => {
+//   return {
+//     ...newArr,
+//     [car.brand]: car.year,
+//   };
+// }, {});
 
 // console.log(carForYear);
 
@@ -280,4 +280,28 @@ for (let i = 0; i <= 4; i++) {
   }
 }
 
-console.table(newArray);
+// console.table(newArray);
+
+let japanCars = ["subaru", "toyota", "suzuki", "honda"];
+
+// for (let i = 0; i < japanCars.length; i++) {
+//   console.log(japanCars[i]);
+// }
+
+let cars = {
+  brand: "BMW",
+  model: "3 series",
+  year: "2023",
+};
+
+// let carsArray = Object.keys(cars);
+
+// for (let i = 0; i < carsArray.length; i++) {
+//   console.log(`${carsArray[i]}: ${cars[carsArray[i]]}`);
+// }
+
+// console.log(Object.entries(cars));
+
+for (const [key, value] of Object.entries(cars)) {
+  console.log(`${key} - ${value}`);
+}
