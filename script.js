@@ -268,4 +268,16 @@ let carForYear = cars.reduce((newArr, car) => {
   };
 }, {});
 
-console.log(carForYear);
+// console.log(carForYear);
+
+// вложенные циклы
+let newArray = [];
+
+for (let i = 0; i <= 4; i++) {
+  newArray.push([]);
+  for (let j = 0; j <= 5; j++) {
+    newArray[i].push(j);
+  }
+}
+
+console.table(newArray);
