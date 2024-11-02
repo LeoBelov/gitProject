@@ -220,4 +220,52 @@ let newCourses = courses.reduce((newArr, elem) => {
   };
 }, {});
 
-console.log(newCourses);
+// console.log(newCourses);
+
+// for ... in
+
+let skillsForJS = {
+  1: "HTML",
+  2: "CSS",
+  3: "JS",
+  4: "React JS",
+  5: "Node JS",
+};
+
+// for (let key in skillsForJS) {
+//   console.log(`${+key} - ${skillsForJS[key]}`);
+// }
+
+// console.log(Object.keys(skillsForJS).length);
+
+let cars = [
+  {
+    brand: "BMW",
+    model: "3 series",
+    year: "2023",
+  },
+  {
+    brand: "Audi",
+    model: "A4",
+    year: "2022",
+  },
+  {
+    brand: "Mercedes",
+    model: "C-class",
+    year: "2024",
+  },
+  {
+    brand: "Lexus",
+    model: "IS",
+    year: "2021",
+  },
+];
+
+let carForYear = cars.reduce((newArr, car) => {
+  return {
+    ...newArr,
+    [car.brand]: car.year,
+  };
+}, {});
+
+console.log(carForYear);
