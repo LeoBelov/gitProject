@@ -288,11 +288,11 @@ let japanCars = ["subaru", "toyota", "suzuki", "honda"];
 //   console.log(japanCars[i]);
 // }
 
-let cars = {
-  brand: "BMW",
-  model: "3 series",
-  year: "2023",
-};
+// let cars = {
+//   brand: "BMW",
+//   model: "3 series",
+//   year: "2023",
+// };
 
 // let carsArray = Object.keys(cars);
 
@@ -302,6 +302,61 @@ let cars = {
 
 // console.log(Object.entries(cars));
 
-for (const [key, value] of Object.entries(cars)) {
-  console.log(`${key} - ${value}`);
+// for (const [key, value] of Object.entries(cars)) {
+//   console.log(`${key} - ${value}`);
+// }
+
+let cars = [
+  {
+    model: "Golf",
+    make: "Volkswagen",
+    year: 1999,
+    color: "black",
+  },
+  {
+    model: "Picanto",
+    make: "Kia",
+    year: 2020,
+    color: "red",
+  },
+  {
+    model: "Peugeot",
+    make: "208",
+    year: 2021,
+    color: "black",
+  },
+  {
+    model: "Fiat",
+    make: "Punto",
+    year: 2020,
+    color: "black",
+  },
+];
+
+// for (i = 0; i < cars.length; i++) {
+//   if (cars[i].year <= 2020) {
+//     if (cars[i].color === "black") {
+//       console.log(`car a find: ${cars[i].make} ${cars[i].model}`);
+//       break;
+//     }
+//   }
+// }
+
+let longArray = [];
+
+for (i = 0; i <= 50000; i++) {
+  longArray.push(Math.floor(Math.random() * 100));
+}
+
+// console.log(longArray);
+
+let notFound = true;
+
+while (longArray.length > 0 && notFound) {
+  if (longArray[0] !== 1) {
+    longArray.shift();
+  } else {
+    console.log("Found 1!");
+    notFound = false;
+  }
 }
