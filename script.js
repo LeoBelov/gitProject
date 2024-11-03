@@ -350,13 +350,22 @@ for (i = 0; i <= 50000; i++) {
 
 // console.log(longArray);
 
-let notFound = true;
+// let notFound = true;
 
-while (longArray.length > 0 && notFound) {
-  if (longArray[0] !== 1) {
-    longArray.shift();
-  } else {
-    console.log("Found 1!");
-    notFound = false;
+// while (longArray.length > 0 && notFound) {
+//   if (longArray[0] !== 1) {
+//     longArray.shift();
+//   } else {
+//     console.log("Found 1!");
+//     notFound = false;
+//   }
+// }
+
+for (let car of cars) {
+  if (car.color != "black") {
+    continue;
+  }
+  if (car.year >= 2020) {
+    console.log(car);
   }
 }
