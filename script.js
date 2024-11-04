@@ -403,12 +403,56 @@ let newCars = ["mercedes", ...spread, "toyota"];
 // console.log(newCars);
 
 //rest аналогичен spread, только используется в параметрах функции
-const addNumbers = (arg1, arg2) => arg1 + arg2;
+// const addNumbers = (arg1, arg2) => arg1 + arg2;
 
-let arrNumbers = [];
+// let arrNumbers = [];
 
-for (i = 0; i <= 10; i++) {
-  arrNumbers.push(addNumbers(i, 2 * i));
+// for (i = 0; i <= 10; i++) {
+//   arrNumbers.push(addNumbers(i, 2 * i));
+// }
+
+// console.log(arrNumbers);
+
+let globalVar = "global";
+
+function doingStaff() {
+  if (true) {
+    var globalVar = "local";
+  }
+  console.log(globalVar);
 }
 
-console.log(arrNumbers);
+// doingStaff();
+// console.log(globalVar);
+
+// IIFE - немедленно вызываемое функциональное выражение
+// (function (name) {
+//   console.log(`Hello, ${name}`);
+// })("Leo");
+
+// ((name) => {
+//   console.log(`Hi, ${name}`);
+// })("Petr");
+
+//Рекурсивная функция
+
+function getRecursion(nr) {
+  console.log(nr);
+  if (nr > 0) {
+    getRecursion(--nr);
+  }
+}
+
+// getRecursion(33);
+
+function getFactorial4(n) {
+  if (n <= 1) return 1;
+  return n * getFactorial4(n - 1);
+}
+
+// console.log(getFactorial4(50));
+
+let anonymous = () => console.log("Anonymous Function");
+
+// setTimeout(anonymous, 1000);
+setInterval(anonymous, 2000);
