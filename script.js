@@ -389,4 +389,26 @@ function varContainingFunction() {
   console.log(varFunction);
 }
 
-varContainingFunction();
+// varContainingFunction();
+
+//Стрелочная функция для вывода массива на экран
+let names = ["Leo", "Mike", "Petr", "Ivan"];
+
+// names.forEach((name) => console.log(name));
+
+//spread
+let spread = ["volvo", "bmw", "audi"];
+let newCars = ["mercedes", ...spread, "toyota"];
+
+// console.log(newCars);
+
+//rest аналогичен spread, только используется в параметрах функции
+const addNumbers = (arg1, arg2) => arg1 + arg2;
+
+let arrNumbers = [];
+
+for (i = 0; i <= 10; i++) {
+  arrNumbers.push(addNumbers(i, 2 * i));
+}
+
+console.log(arrNumbers);
