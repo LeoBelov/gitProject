@@ -361,11 +361,32 @@ for (i = 0; i <= 50000; i++) {
 //   }
 // }
 
-for (let car of cars) {
-  if (car.color != "black") {
-    continue;
-  }
-  if (car.year >= 2020) {
-    console.log(car);
-  }
+// for (let car of cars) {
+//   if (car.color != "black") {
+//     continue;
+//   }
+//   if (car.year >= 2020) {
+//     console.log(car);
+//   }
+// }
+
+// let groups = [
+//   ["Martin", "Daniel", "Keith"],
+//   ["Margot", "Marina", "Ali"],
+//   ["Helen", "Jonah", "Sambikos"],
+// ];
+
+// for (let group of groups) {
+//   for (let member of group) {
+//     if (member.startsWith("A")) {
+//       console.log(member);
+//     }
+//   }
+// }
+
+function varContainingFunction() {
+  let varFunction = "Hello, Function!";
+  console.log(varFunction);
 }
+
+varContainingFunction();
